@@ -31,6 +31,7 @@ ul {
   font-size: 1.8rem;
   color: #0e79bd;
   font-weight: 600;
+  cursor: pointer;
 }
 .navbar .nav-items span button {
   color: white;
@@ -40,6 +41,7 @@ ul {
   background: #0e79bd;
   border: none;
   border-radius: 8%;
+  cursor: pointer;
 }
 .header {
   display: flex;
