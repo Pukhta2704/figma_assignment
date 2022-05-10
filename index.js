@@ -1,5 +1,6 @@
 let loading = true
 document.querySelector(".lds-roller").style = "display:block;"
+document.querySelector(".categories button").style = "display:none;"
 let j = Math.floor(Math.random() * 500)
 // let j = 3
 let result = []
@@ -28,6 +29,7 @@ document.querySelector(".categories button").addEventListener("click", () => {
 })
 const setData = async () => {
   document.querySelector(".lds-roller").style = "display:block;"
+document.querySelector(".categories button").style = "display:none;"
   for (let i = j; i < j + 3; i++) {
     if (await checkImage(result[i].imageURL)) {
       const newElement = `
@@ -43,6 +45,7 @@ const setData = async () => {
   }
   j += 3
   document.querySelector(".lds-roller").style = "display:none;"
+document.querySelector(".categories button").style = "display:block;"
 }
 async function checkImage(url) {
   const res = await fetch(url)
