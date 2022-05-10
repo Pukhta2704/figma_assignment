@@ -85,11 +85,28 @@ ul {
 }
 .categories .cards div img {
   height: 75%;
+  border-radius: 10%;
 }
 .categories .cards div p {
   margin-bottom: 0.3rem;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: black;
+}
+.categories button {
+  color: white;
+  padding: 1rem 4rem 1rem 4rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  background: #0e79bd;
+  border: none;
+  border-radius: 10px;
+  margin-left: 38%;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.categories button:hover {
+  transform: scale(105%);
 }
 .glance-at-product {
   margin-top: 5.5rem;
@@ -118,8 +135,8 @@ ul {
   padding-left: 10rem;
   padding-right: 10rem;
 }
-.faqs .heading{
-    margin-bottom: 5rem;
+.faqs .heading {
+  margin-bottom: 5rem;
 }
 .faqs .cards {
   margin-top: 2rem;
@@ -165,12 +182,12 @@ ul {
   opacity: 1;
 }
 .have-a-read {
-    margin-top: 7rem;
+  margin-top: 7rem;
   padding-left: 10rem;
   padding-right: 10rem;
 }
-.have-a-read .heading{
-    margin-bottom: 4rem;
+.have-a-read .heading {
+  margin-bottom: 4rem;
 }
 .have-a-read .cards {
   margin-top: 2rem;
@@ -210,12 +227,12 @@ ul {
   cursor: pointer;
 }
 .topics-you-cant-miss {
-    margin-top: 7rem;
+  margin-top: 7rem;
   padding-left: 10rem;
   padding-right: 10rem;
 }
-.topics-you-cant-miss .heading{
-    margin-bottom: 5rem;
+.topics-you-cant-miss .heading {
+  margin-bottom: 5rem;
 }
 .topics-you-cant-miss .cards {
   margin-top: 2rem;
@@ -275,7 +292,7 @@ ul {
   mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 .footer {
-    margin-top: 10rem;
+  margin-top: 10rem;
   background-color: #0e79bd;
   display: flex;
   flex-direction: row;
@@ -308,4 +325,92 @@ ul {
   text-align: center;
   padding: 4rem;
   padding-bottom: 5rem;
+}
+/* CSS LOADER */
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left: 45%;
+  margin-top: 1rem;
+  display: none;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: black;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
