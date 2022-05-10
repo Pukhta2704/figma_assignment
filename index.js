@@ -11,21 +11,23 @@ const options = {
     "X-RapidAPI-Key": "27c0185529msh8e889740729f035p1dd26djsn3db436618e85"
   }
 }
-fetch(
-  "https://list-of-freshwater-aquarium-fish-species.p.rapidapi.com/species",
-  options
-)
-  .then((response) => response.json())
-  .then((response) => {
-    result = response
-    setData()
-  })
-  .catch((err) => console.error(err))
+if (result.length === 0) {
+  fetch(
+    "https://list-of-freshwater-aquarium-fish-species.p.rapidapi.com/species",
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      result = response
+      setData()
+    })
+    .catch((err) => console.error(err))
+}
 document.querySelector(".categories button").addEventListener("click", () => {
   setData()
 })
 const setData = async () => {
-document.querySelector(".lds-roller").style = "display:block;"
+  document.querySelector(".lds-roller").style = "display:block;"
   for (let i = j; i < j + 3; i++) {
     if (await checkImage(result[i].imageURL)) {
       const newElement = `
