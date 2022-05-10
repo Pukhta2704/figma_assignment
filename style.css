@@ -86,7 +86,8 @@ ul {
   color: white;
 }
 .categories .cards div img {
-  height: 75%;
+  width: 60%;
+  height: 60%;
   border-radius: 10%;
 }
 .categories .cards div p {
